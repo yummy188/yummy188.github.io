@@ -11,6 +11,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
         }
+
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
@@ -18,52 +19,157 @@
             min-height: 100vh;
             padding: 20px;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 40px auto;
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+
         h1 {
-            color: #2c3e50;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            font-size: 2.5em;
+            color: #2c3e50;
+            text-align: center;
         }
+
         p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        .highlight {
-            background: #f8f9fa;
-            padding: 15px;
+            color: #3498db;
             border-left: 4px solid #3498db;
-            margin: 20px 0;
-            border-radius: 4px;
+            padding-left: 10px;
         }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #ecf0f1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .contact {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
-            color: #7f8c8d;
-            font-size: 0.9em;
+            color: #999;
+         font   -size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>欢迎来到美味188的个人主页</h1>
-        这是一个用 GitHub Pages 搭建的极简个人主页，完全免费、无需服务器。
-        
-        <div class="highlight">
-            <strong>我的技能：</strong> 前端开发、HTML/CSS、JavaScript、Python
-            正在学习：React、Node.js、Git 高级操作
+
+        <div class="section">
+            这是一个用 GitHub Pages 搭建的极简个人主页，完全免费、无需服务器。
         </div>
 
-        我热爱编程，喜欢分享知识，也期待与大家一起成长。
-        
+        <div class="section">
+            <div class="section-title">关于我</div>
+            我是一名热爱编程的开发者，专注于前端技术与 Python 后端开发。喜欢探索新技术、分享学习心得，也期待与大家一起成长。
+        </div>
+
+        <div class="section">
+            <div class="section-title">我的技能</div>
+            <div class="skills">
+                <span class="skill-tag">前端开发</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Linux</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">我的项目</div>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-title">个人博客系统</div>
+                    使用 React + Node.js 搭建，支持文章发布与评论。
+                </div>
+                <div class="project-card">
+                    <div class="project-title">简易计算器</div>
+                    用 JavaScript 实现的网页计算器，支持四则运算。
+                </div>
+                <div class="project-card">
+                    <div class="project-title">天气查询工具</div>
+                    调用第三方 API，实时显示城市天气信息。
+                </div>
+            </div>
+        </div>
+
+        <div class="section contact">
+            <a href="mailto:yummy188@example.com">📧 联系我</a>
+            <a href="https://github.com/yummy188" target="_blank">👨‍💻 GitHub</a>
+            <a href="https://twitter.com/yummy188" target="_blank">🐦 Twitter</a>
+        </div>
+
         <footer>
-            &copy; 2025 美味188. 保留所有权利。
+            © 2025 美味188. 保留所有权利。
         </footer>
     </div>
 </body>
