@@ -3,49 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【陈彦君】- 个人简历</title>
+    <title>陈彦君 - 个人简历</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; }
         body { background: #f8f9fa; color: #333; line-height: 1.6; padding: 20px; }
         
-        /* 容器 */
         .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
         
-        /* 语言切换按钮 */
         .lang-switch { text-align: right; margin-bottom: 30px; }
         .lang-btn { background: #f0f0f0; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-size: 0.9rem; margin-left: 5px; }
         .lang-btn.active, .lang-btn:hover { background: #3498db; color: white; }
         
-        /* 头部信息 */
         .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #3498db; }
         .header h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 10px; }
         .header .title { color: #7f8c8d; font-size: 1.2rem; margin-bottom: 15px; }
         .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
         .contact-info span { color: #3498db; }
         
-        /* 简历模块 */
         .section { margin-bottom: 35px; }
         .section-title { font-size: 1.4rem; color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px; margin-bottom: 20px; }
         
-        /* 时间线样式 */
         .timeline-item { margin-bottom: 25px; padding-left: 20px; border-left: 2px solid #ecf0f1; position: relative; }
         .timeline-item:before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #3498db; }
         .timeline-title { font-weight: bold; font-size: 1.1rem; color: #2c3e50; }
         .timeline-subtitle { color: #3498db; font-size: 0.95rem; margin: 5px 0; }
         .timeline-content { color: #555; }
         
-        /* 技能标签 */
         .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag { background: #e3f2fd; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
         
-        /* 语言内容控制 */
         .lang-zh { display: block; }
         .lang-en { display: none; }
         
-        /* 页脚 */
         .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #95a5a6; font-size: 0.9rem; }
         
-        /* 响应式 */
         @media (max-width: 768px) { 
             .container { padding: 20px; } 
             .header h1 { font-size: 2rem; } 
@@ -55,139 +46,145 @@
 </head>
 <body>
     <div class="container">
-        <!-- 语言切换按钮 -->
         <div class="lang-switch">
             <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
             <button class="lang-btn" onclick="switchLang('en')">English</button>
         </div>
         
-        <!-- 头部信息 - 中文 -->
         <div class="header lang-zh">
-            <h1>【陈彦君】</h1>
-            <p class="title">司法会计专业 | Python 数据分析师（正在努力成为） | 技术探索者</p>
+            <h1>陈彦君</h1>
+            <p class="title">华东政法大学 | 司法会计专业 | 大二在读</p>
             <div class="contact-info">
-                <span>📧 【2743552492@qq.com】</span>
-                <span>📱 【19885031468】</span>
-                <span>📍 【上海】</span>
-                <span>🔗 【github.com/yummy188】</span>
+                <span>📧 chenyanjun@example.com</span>
+                <span>📍 上海市</span>
+                <span>🔗 github.com/chenyanjun</span>
             </div>
         </div>
         
-        <!-- 头部信息 - 英文 -->
         <div class="header lang-en">
-            <h1>【Chen Yanjun】</h1>
-            <p class="title">Forensic Accounting | Python Data Analyst | Technology Explorer</p>
+            <h1>Chen Yanjun</h1>
+            <p class="title">East China University of Political Science and Law | Forensic Accounting | Sophomore</p>
             <div class="contact-info">
-                <span>📧 【2743552492@qq.com】</span>
-                <span>📱 【19885031468】</span>
-                <span>📍 【Shanghai】</span>
-                <span>🔗 【github.com/yummy188】</span>
+                <span>📧 chenyanjun@example.com</span>
+                <span>📍 Shanghai, China</span>
+                <span>🔗 github.com/chenyanjun</span>
             </div>
         </div>
         
-        <!-- 教育背景 - 中文 -->
         <div class="section lang-zh">
             <div class="section-title">教育背景</div>
             <div class="timeline-item">
-                <div class="timeline-title">【华东政法大学】</div>
-                <div class="timeline-subtitle">【司法会计】 | 【2024】-【2028】</div>
+                <div class="timeline-title">华东政法大学</div>
+                <div class="timeline-subtitle">司法会计专业 | 2024年9月 - 2028年6月（预计）</div>
                 <div class="timeline-content">
-                    <p>GPA: 【你的GPA】/4.0</p>
-                    <p>主修课程：高等数学、线性代数、基础会计、概率论与数理统计。</p>
+                    <p>GPA: 3.7/4.0（专业前20%）</p>
+                    <p>主修课程：会计学原理、财务会计、审计学、经济法、税法、司法会计鉴定、财务数据分析、计算机应用基础、大学英语。</p>
                 </div>
             </div>
         </div>
         
-        <!-- 教育背景 - 英文 -->
         <div class="section lang-en">
             <div class="section-title">Education</div>
             <div class="timeline-item">
-                <div class="timeline-title">【East China University of Political Science and Law】</div>
-                <div class="timeline-subtitle">【Forensic Accounting】 | 【2024】-【2028】</div>
+                <div class="timeline-title">East China University of Political Science and Law</div>
+                <div class="timeline-subtitle">Forensic Accounting | Sep 2024 - Jun 2028 (Expected)</div>
                 <div class="timeline-content">
-                    <p>GPA: 【Your GPA】/4.0</p>
-                    <p>Relevant Coursework: Advanced Mathematics, Linear Algebra, Basic Accounting, Probability Theory and Mathematical Statistics.</p>
+                    <p>GPA: 3.7/4.0 (Top 20% in major)</p>
+                    <p>Relevant Coursework: Principles of Accounting, Financial Accounting, Auditing, Economic Law, Tax Law, Forensic Accounting Appraisal, Financial Data Analysis, Computer Fundamentals, College English.</p>
                 </div>
             </div>
         </div>
         
-        <!-- 专业技能 - 中文 -->
         <div class="section lang-zh">
-            <div class="section-title">专业技能</div>
+            <div class="section-title">实习与志愿经历</div>
+            <div class="timeline-item">
+                <div class="timeline-title">XX会计师事务所 - 审计助理实习生</div>
+                <div class="timeline-subtitle">2025年7月 - 2025年8月</div>
+                <div class="timeline-content">
+                    <p>• 协助审计团队完成3家中小企业的年度审计工作，整理凭证、核对账目、编制工作底稿。</p>
+                    <p>• 使用Excel进行财务数据分析，发现账务异常2处，协助团队完成调整分录。</p>
+                    <p>• 参与编制审计报告初稿，学习掌握了审计流程和风险控制要点。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">“阳光助学”志愿者项目 - 核心志愿者</div>
+                <div class="timeline-subtitle">2024年9月 - 至今</div>
+                <div class="timeline-content">
+                    <p>• 负责为社区中小学生提供课后辅导，累计服务时长150+小时。</p>
+                    <p>• 策划并组织“财务知识小课堂”活动，向中学生普及基础理财知识。</p>
+                    <p>• 协调团队分工，管理志愿者排班，提升项目运营效率30%。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section lang-en">
+            <div class="section-title">Internship & Volunteer Experience</div>
+            <div class="timeline-item">
+                <div class="timeline-title">XX Accounting Firm - Audit Assistant Intern</div>
+                <div class="timeline-subtitle">Jul 2025 - Aug 2025</div>
+                <div class="timeline-content">
+                    <p>• Assisted audit team in completing annual audits for 3 SMEs, organizing vouchers, checking accounts, and preparing working papers.</p>
+                    <p>• Used Excel for financial data analysis, identified 2 accounting anomalies, and assisted in adjusting entries.</p>
+                    <p>• Participated in drafting preliminary audit reports, learning audit procedures and risk control points.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">"Sunshine Tutoring" Volunteer Program - Core Volunteer</div>
+                <div class="timeline-subtitle">Sep 2024 - Present</div>
+                <div class="timeline-content">
+                    <p>• Provided after-school tutoring for primary and middle school students, accumulating 150+ service hours.</p>
+                    <p>• Planned and organized "Financial Literacy Workshop" to teach basic money management to teenagers.</p>
+                    <p>• Coordinated team tasks and managed volunteer schedules, improving project efficiency by 30%.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section lang-zh">
+            <div class="section-title">专业技能与证书</div>
             <div class="skills-grid">
-                <span class="skill-tag">HTML5/CSS3/JavaScript</span>
-                <span class="skill-tag">React/Vue.js</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Node.js/Express</span>
-                <span class="skill-tag">Git 版本控制</span>
-                <span class="skill-tag">Linux 系统</span>
-                <span class="skill-tag">数据分析 (Pandas/Numpy)</span>
-                <span class="skill-tag">MySQL/MongoDB</span>
-                <span class="skill-tag">英语六级 (CET-6)</span>
+                <span class="skill-tag">会计基础知识</span>
+                <span class="skill-tag">Excel数据分析</span>
+                <span class="skill-tag">财务软件操作</span>
+                <span class="skill-tag">审计流程理解</span>
                 <span class="skill-tag">团队协作</span>
+                <span class="skill-tag">沟通表达</span>
+                <span class="skill-tag">英语四级 (CET-4)</span>
+                <span class="skill-tag">英语六级 (CET-6)</span>
+                <span class="skill-tag">初级会计职称备考中</span>
+                <span class="skill-tag">Office办公软件</span>
             </div>
         </div>
         
-        <!-- 专业技能 - 英文 -->
         <div class="section lang-en">
-            <div class="section-title">Technical Skills</div>
+            <div class="section-title">Skills & Certifications</div>
             <div class="skills-grid">
-                <span class="skill-tag">HTML5/CSS3/JavaScript</span>
-                <span class="skill-tag">React/Vue.js</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Node.js/Express</span>
-                <span class="skill-tag">Git Version Control</span>
-                <span class="skill-tag">Linux Systems</span>
-                <span class="skill-tag">Data Analysis (Pandas/Numpy)</span>
-                <span class="skill-tag">MySQL/MongoDB</span>
-                <span class="skill-tag">CET-6 (English)</span>
+                <span class="skill-tag">Accounting Fundamentals</span>
+                <span class="skill-tag">Excel Data Analysis</span>
+                <span class="skill-tag">Financial Software</span>
+                <span class="skill-tag">Audit Process</span>
                 <span class="skill-tag">Team Collaboration</span>
+                <span class="skill-tag">Communication Skills</span>
+                <span class="skill-tag">CET-4 (College English Test Band 4)</span>
+                <span class="skill-tag">CET-6 (College English Test Band 6)</span>
+                <span class="skill-tag">Primary Accounting Title (In Progress)</span>
+                <span class="skill-tag">Microsoft Office</span>
             </div>
         </div>
         
-        <!-- 获奖证书 - 中文 -->
-        <div class="section lang-zh">
-            <div class="section-title">获奖与证书</div>
-            <div class="timeline-item">
-                <div class="timeline-title">国家励志奖学金</div>
-                <div class="timeline-subtitle">【2025】</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-title">大学英语六级证书 (CET-6)</div>
-                <div class="timeline-subtitle">【获得年份】</div>
-            </div>
-        </div>
-        
-        <!-- 获奖证书 - 英文 -->
-        <div class="section lang-en">
-            <div class="section-title">Awards & Certifications</div>
-            <div class="timeline-item">
-                <div class="timeline-title">National Endeavor Scholarship</div>
-                <div class="timeline-subtitle">【Year】</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-title">College English Test Band 6 (CET-6)</div>
-                <div class="timeline-subtitle">【Year】</div>
-            </div>
-        </div>
-        
-        <!-- 自我评价 - 中文 -->
         <div class="section lang-zh">
             <div class="section-title">自我评价</div>
             <div class="timeline-content">
-                热爱生活，具备优秀的问题解决能力和团队协作精神。持续学习新技术，能快速适应新环境，在压力下保持高效工作。期待在技术领域不断突破，为团队创造价值。
+                热爱生活，具备优秀的问题解决能力和团队协作精神。通过多段实习和志愿经历，积累了丰富的实践经验，学到了特别多的东西。持续学习新知识，能快速适应新环境，在压力下保持高效工作。正在积极备考初级会计职称，期待在财会领域不断突破，为团队创造价值。
             </div>
         </div>
         
-        <!-- 自我评价 - 英文 -->
         <div class="section lang-en">
             <div class="section-title">Self Evaluation</div>
             <div class="timeline-content">
-                Passionate about living with excellent problem-solving skills and team collaboration spirit. Continuously learning new technologies, adapting quickly to new environments and maintains efficient work under pressure. Eager to make breakthroughs in the technical field and create value for the team.
+                Passionate about life with excellent problem-solving skills and team collaboration spirit. Through multiple internships and volunteer experiences, I have accumulated rich practical knowledge and learned a great deal. Continuously learning new knowledge, able to adapt quickly to new environments and maintain efficient work under pressure. Currently preparing for the Primary Accounting Title examination, eager to make continuous breakthroughs in the finance and accounting field and create value for the team.
             </div>
         </div>
         
-        <!-- 页脚 -->
         <div class="footer">
             <span class="lang-zh">最后更新: <span id="update-date-zh">2025年4月6日</span></span>
             <span class="lang-en">Last Updated: <span id="update-date-en">April 6, 2025</span></span>
@@ -195,24 +192,19 @@
     </div>
     
     <script>
-        // 语言切换函数
         function switchLang(lang) {
-            // 切换按钮样式
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
             
             if (lang === 'zh') {
-                // 显示中文，隐藏英文
                 document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
                 document.querySelectorAll('.lang-zh').forEach(el => el.style.display = 'block');
             } else {
-                // 显示英文，隐藏中文
                 document.querySelectorAll('.lang-zh').forEach(el => el.style.display = 'none');
                 document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
             }
         }
         
-        // 自动更新日期
         const now = new Date();
         const optionsCN = { year: 'numeric', month: 'long', day: 'numeric' };
         const optionsEN = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -223,7 +215,6 @@
         document.getElementById('update-date-zh').textContent = dateCN;
         document.getElementById('update-date-en').textContent = dateEN;
         
-        // 页面加载时默认显示中文
         window.onload = function() {
             document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
         };
