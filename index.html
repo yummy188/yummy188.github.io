@@ -3,174 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美味188的个人主页</title>
+    <title>【陈彦君】- 个人简历</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #3498db;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #ecf0f1;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #2c3e50;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .contact {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            margin-top: 40px;
-        }
-
-        .contact a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #999;
-         font   -size: 0.9rem;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; }
+        body { background: #f8f9fa; color: #333; line-height: 1.6; padding: 20px; }
+        
+        /* 容器 */
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        
+        /* 语言切换按钮 */
+        .lang-switch { text-align: right; margin-bottom: 30px; }
+        .lang-btn { background: #f0f0f0; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-size: 0.9rem; margin-left: 5px; }
+        .lang-btn.active, .lang-btn:hover { background: #3498db; color: white; }
+        
+        /* 头部信息 */
+        .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #3498db; }
+        .header h1 { font-size: 2.5rem; color: #2c3e50; margin-bottom: 10px; }
+        .header .title { color: #7f8c8d; font-size: 1.2rem; margin-bottom: 15px; }
+        .contact-info { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .contact-info span { color: #3498db; }
+        
+        /* 简历模块 */
+        .section { margin-bottom: 35px; }
+        .section-title { font-size: 1.4rem; color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px; margin-bottom: 20px; }
+        
+        /* 时间线样式 */
+        .timeline-item { margin-bottom: 25px; padding-left: 20px; border-left: 2px solid #ecf0f1; position: relative; }
+        .timeline-item:before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #3498db; }
+        .timeline-title { font-weight: bold; font-size: 1.1rem; color: #2c3e50; }
+        .timeline-subtitle { color: #3498db; font-size: 0.95rem; margin: 5px 0; }
+        .timeline-content { color: #555; }
+        
+        /* 技能标签 */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #e3f2fd; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+        
+        /* 语言内容控制 */
+        .lang-zh { display: block; }
+        .lang-en { display: none; }
+        
+        /* 页脚 */
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #95a5a6; font-size: 0.9rem; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) { 
+            .container { padding: 20px; } 
+            .header h1 { font-size: 2rem; } 
+            .contact-info { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>欢迎来到美味188的个人主页</h1>
-
-        <div class="section">
-            这是一个用 GitHub Pages 搭建的极简个人主页，完全免费、无需服务器。
+        <!-- 语言切换按钮 -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
         </div>
-
-        <div class="section">
-            <div class="section-title">关于我</div>
-            我是一名热爱编程的开发者，专注于前端技术与 Python 后端开发。喜欢探索新技术、分享学习心得，也期待与大家一起成长。
+        
+        <!-- 头部信息 - 中文 -->
+        <div class="header lang-zh">
+            <h1>【陈彦君】</h1>
+            <p class="title">司法会计专业 | Python 数据分析师（正在努力成为） | 技术探索者</p>
+            <div class="contact-info">
+                <span>📧 【2743552492@qq.com】</span>
+                <span>📱 【19885031468】</span>
+                <span>📍 【上海】</span>
+                <span>🔗 【github.com/yummy188】</span>
+            </div>
         </div>
-
-        <div class="section">
-            <div class="section-title">我的技能</div>
-            <div class="skills">
-                <span class="skill-tag">前端开发</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
+        
+        <!-- 头部信息 - 英文 -->
+        <div class="header lang-en">
+            <h1>【Chen Yanjun】</h1>
+            <p class="title">Forensic Accounting | Python Data Analyst | Technology Explorer</p>
+            <div class="contact-info">
+                <span>📧 【2743552492@qq.com】</span>
+                <span>📱 【19885031468】</span>
+                <span>📍 【Shanghai】</span>
+                <span>🔗 【github.com/yummy188】</span>
+            </div>
+        </div>
+        
+        <!-- 教育背景 - 中文 -->
+        <div class="section lang-zh">
+            <div class="section-title">教育背景</div>
+            <div class="timeline-item">
+                <div class="timeline-title">【华东政法大学】</div>
+                <div class="timeline-subtitle">【司法会计】 | 【2024】-【2028】</div>
+                <div class="timeline-content">
+                    <p>GPA: 【你的GPA】/4.0</p>
+                    <p>主修课程：高等数学、线性代数、基础会计、概率论与数理统计。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 教育背景 - 英文 -->
+        <div class="section lang-en">
+            <div class="section-title">Education</div>
+            <div class="timeline-item">
+                <div class="timeline-title">【East China University of Political Science and Law】</div>
+                <div class="timeline-subtitle">【Forensic Accounting】 | 【2024】-【2028】</div>
+                <div class="timeline-content">
+                    <p>GPA: 【Your GPA】/4.0</p>
+                    <p>Relevant Coursework: Advanced Mathematics, Linear Algebra, Basic Accounting, Probability Theory and Mathematical Statistics.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 专业技能 - 中文 -->
+        <div class="section lang-zh">
+            <div class="section-title">专业技能</div>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5/CSS3/JavaScript</span>
+                <span class="skill-tag">React/Vue.js</span>
                 <span class="skill-tag">Python</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Node.js/Express</span>
+                <span class="skill-tag">Git 版本控制</span>
+                <span class="skill-tag">Linux 系统</span>
+                <span class="skill-tag">数据分析 (Pandas/Numpy)</span>
+                <span class="skill-tag">MySQL/MongoDB</span>
+                <span class="skill-tag">英语六级 (CET-6)</span>
+                <span class="skill-tag">团队协作</span>
             </div>
         </div>
-
-        <div class="section">
-            <div class="section-title">我的项目</div>
-            <div class="projects">
-                <div class="project-card">
-                    <div class="project-title">个人博客系统</div>
-                    使用 React + Node.js 搭建，支持文章发布与评论。
-                </div>
-                <div class="project-card">
-                    <div class="project-title">简易计算器</div>
-                    用 JavaScript 实现的网页计算器，支持四则运算。
-                </div>
-                <div class="project-card">
-                    <div class="project-title">天气查询工具</div>
-                    调用第三方 API，实时显示城市天气信息。
-                </div>
+        
+        <!-- 专业技能 - 英文 -->
+        <div class="section lang-en">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5/CSS3/JavaScript</span>
+                <span class="skill-tag">React/Vue.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Node.js/Express</span>
+                <span class="skill-tag">Git Version Control</span>
+                <span class="skill-tag">Linux Systems</span>
+                <span class="skill-tag">Data Analysis (Pandas/Numpy)</span>
+                <span class="skill-tag">MySQL/MongoDB</span>
+                <span class="skill-tag">CET-6 (English)</span>
+                <span class="skill-tag">Team Collaboration</span>
             </div>
         </div>
-
-        <div class="section contact">
-            <a href="mailto:yummy188@example.com">📧 联系我</a>
-            <a href="https://github.com/yummy188" target="_blank">👨‍💻 GitHub</a>
-            <a href="https://twitter.com/yummy188" target="_blank">🐦 Twitter</a>
+        
+        <!-- 获奖证书 - 中文 -->
+        <div class="section lang-zh">
+            <div class="section-title">获奖与证书</div>
+            <div class="timeline-item">
+                <div class="timeline-title">国家励志奖学金</div>
+                <div class="timeline-subtitle">【2025】</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">大学英语六级证书 (CET-6)</div>
+                <div class="timeline-subtitle">【获得年份】</div>
+            </div>
         </div>
-
-        <footer>
-            © 2025 美味188. 保留所有权利。
-        </footer>
+        
+        <!-- 获奖证书 - 英文 -->
+        <div class="section lang-en">
+            <div class="section-title">Awards & Certifications</div>
+            <div class="timeline-item">
+                <div class="timeline-title">National Endeavor Scholarship</div>
+                <div class="timeline-subtitle">【Year】</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-title">College English Test Band 6 (CET-6)</div>
+                <div class="timeline-subtitle">【Year】</div>
+            </div>
+        </div>
+        
+        <!-- 自我评价 - 中文 -->
+        <div class="section lang-zh">
+            <div class="section-title">自我评价</div>
+            <div class="timeline-content">
+                热爱生活，具备优秀的问题解决能力和团队协作精神。持续学习新技术，能快速适应新环境，在压力下保持高效工作。期待在技术领域不断突破，为团队创造价值。
+            </div>
+        </div>
+        
+        <!-- 自我评价 - 英文 -->
+        <div class="section lang-en">
+            <div class="section-title">Self Evaluation</div>
+            <div class="timeline-content">
+                Passionate about living with excellent problem-solving skills and team collaboration spirit. Continuously learning new technologies, adapting quickly to new environments and maintains efficient work under pressure. Eager to make breakthroughs in the technical field and create value for the team.
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <span class="lang-zh">最后更新: <span id="update-date-zh">2025年4月6日</span></span>
+            <span class="lang-en">Last Updated: <span id="update-date-en">April 6, 2025</span></span>
+        </div>
     </div>
+    
+    <script>
+        // 语言切换函数
+        function switchLang(lang) {
+            // 切换按钮样式
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (lang === 'zh') {
+                // 显示中文，隐藏英文
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-zh').forEach(el => el.style.display = 'block');
+            } else {
+                // 显示英文，隐藏中文
+                document.querySelectorAll('.lang-zh').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+            }
+        }
+        
+        // 自动更新日期
+        const now = new Date();
+        const optionsCN = { year: 'numeric', month: 'long', day: 'numeric' };
+        const optionsEN = { year: 'numeric', month: 'long', day: 'numeric' };
+        
+        const dateCN = now.toLocaleDateString('zh-CN', optionsCN);
+        const dateEN = now.toLocaleDateString('en-US', optionsEN);
+        
+        document.getElementById('update-date-zh').textContent = dateCN;
+        document.getElementById('update-date-en').textContent = dateEN;
+        
+        // 页面加载时默认显示中文
+        window.onload = function() {
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+        };
+    </script>
 </body>
 </html>
